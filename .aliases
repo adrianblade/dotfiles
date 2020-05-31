@@ -1,0 +1,24 @@
+alias la="ls -AFh"                  # List all files
+alias ld="ls -d */"                 # List only directories
+alias l.="ls -Ah | egrep '^\.'"     # List only dotfiles (hidden files)
+alias l1='ls -1AFh'                 # List files (one line at a time)
+alias lg="ls -AFh | grep"           # Grep through filenames (also see, hg)
+alias lp="ls -d `pwd`/*"            # List full paths
+alias lpg="ls -d `pwd`/* | grep"    # Grep through filenames but list full path
+alias lt="ls -Alth"                 # Sort by time
+alias ltr="ls -Altrh"               # Sort by time (reverse)
+alias lss="ls -AFlSh"               # Sort by size
+alias lsr="ls -AFlSrh"              # Sort by size (reverse)
+
+
+# Jump down
+alias 1d="cd .."
+alias 2d="cd ../.."
+alias 3d="cd ../../.."
+alias 4d="cd ../../../.."
+alias 5d="cd ../../../../.."
+alias c='clear'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias h='history'
