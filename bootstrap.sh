@@ -11,6 +11,34 @@ declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSIT
 declare dotfilesDirectory="$HOME/workspace/dotfiles"
 declare skipQuestions=false
 
+download() {
+
+    local url="$1"
+    local output="$2"
+
+    if command -v "curl" &> /dev/null; then
+
+        curl -LsSo "$output" "$url" &> /dev/null
+        #     │││└─ write output to file
+        #     ││└─ show error messages
+        #     │└─ don't show the progress meter
+        #     └─ follow redirects
+
+        return $?
+
+    elif command -v "wget" &> /dev/null; then
+
+        wget -qO "$output" "$url" &> /dev/null
+        #     │└─ write output to file
+        #     └─ don't show output
+
+        return $?
+    fi
+
+    return 1
+
+}
+
 download_utils() {
 
     local tmpFile=""
@@ -114,7 +142,6 @@ main() {
     # Check if this script was run directly (./<path>/setup.sh),
     # and if not, it most likely means that the dotfiles were not
     # yet set up, and they will need to be downloaded.
-    printf "hi"
     printf "%s" "${BASH_SOURCE[0]}" | grep "bootstrap.sh" &> /dev/null \
         || download_dotfiles
 
