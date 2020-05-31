@@ -8,7 +8,7 @@ declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSIT
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-declare dotfilesDirectory="$HOME/projects/dotfiles"
+declare dotfilesDirectory="$HOME/workspace/dotfiles"
 declare skipQuestions=false
 
 download_utils() {
@@ -114,8 +114,8 @@ main() {
     # Check if this script was run directly (./<path>/setup.sh),
     # and if not, it most likely means that the dotfiles were not
     # yet set up, and they will need to be downloaded.
-
-    printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
+    printf "hi"
+    printf "%s" "${BASH_SOURCE[0]}" | grep "bootstrap.sh" &> /dev/null \
         || download_dotfiles
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
