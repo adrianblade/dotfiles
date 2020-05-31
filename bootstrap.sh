@@ -1,5 +1,31 @@
 #!/usr/bin/env bash
 
+declare -r GITHUB_REPOSITORY="adrianblade/dotfiles"
+
+declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
+declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
+declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/utils.sh"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+declare dotfilesDirectory="$HOME/projects/dotfiles"
+declare skipQuestions=false
+
+download_utils() {
+
+    local tmpFile=""
+
+    tmpFile="$(mktemp /tmp/XXXXX)"
+
+    download "$DOTFILES_UTILS_URL" "$tmpFile" \
+        && . "$tmpFile" \
+        && rm -rf "$tmpFile" \
+        && return 0
+
+   return 1
+
+}
+
 verify_os() {
 
     declare -r MINIMUM_MACOS_VERSION="10.10"
