@@ -11,9 +11,5 @@ To set up the `dotfiles` run the appropriate snippet in the terminal:
 
 | OS | Snippet |
 |:---|:---|
-| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/adrianblade/dotfiles/master/bootstrap.sh)"` |
-| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/adrianblade/dotfiles/master/bootstrap.sh)"` |
-
-## Thanks to…
-
-* Cătălin Mariș and his [dotfiles repository](https://github.com/alrra/dotfiles)
+| `macOS` | `bash -c "$(curl -LsS https://raw.github.com/adrianblade/dotfiles/master/os/bootstrap.sh)"` |
+| `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/adrianblade/dotfiles/master/os/bootstrap.sh)"` |

@@ -4,7 +4,7 @@ declare -r GITHUB_REPOSITORY="adrianblade/dotfiles"
 
 declare -r DOTFILES_ORIGIN="git@github.com:$GITHUB_REPOSITORY.git"
 declare -r DOTFILES_TARBALL_URL="https://github.com/$GITHUB_REPOSITORY/tarball/master"
-declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/utils.sh"
+declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/os/utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -239,7 +239,7 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    #./create_symbolic_links.sh "$@"
+    ./create_symbolic_links.sh "$@"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
