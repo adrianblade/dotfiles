@@ -234,8 +234,7 @@ main() {
         || download_dotfiles
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    pwd &> /dev/null
-    ls -la &> /dev/null
+
     ./create_directories.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
