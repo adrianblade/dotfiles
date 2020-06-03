@@ -251,10 +251,12 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    #./preferences/main.sh
+    ./preferences/main.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
+    if ! $skipQuestions; then
+        ./restart.sh
+    fi
 }
 
 main "$@"
