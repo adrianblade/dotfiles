@@ -1,4 +1,4 @@
-[adriablade] dotfiles ![Bower](https://img.shields.io/badge/dotfiles-inprogress-blue.svg)
+[adriablade] dotfiles ![Bower](https://img.shields.io/badge/dotfiles-in_progress-red.svg)
 ==========================
 
 Setup
