@@ -1,3 +1,4 @@
+![Bower](https://img.shields.io/badge/dotfiles-inprogress-blue.svg)
 [adriablade] dotfiles
 ==========================
 
