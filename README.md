@@ -14,7 +14,7 @@ To set up the `dotfiles` run the appropriate snippet in the terminal:
 | `macOS` | `bash -c "$(curl -LsS https://raw.github.com/adrianblade/dotfiles/master/os/bootstrap.sh)"` |
 | `Ubuntu` | `bash -c "$(wget -qO - https://raw.github.com/adrianblade/dotfiles/master/os/bootstrap.sh)"` |
 
-
+```
 1.- create_directories.sh - Create custom directories
 2.- create_symbolic_links.sh - Create files
   "shell/aliases/bash_aliases"
@@ -55,3 +55,4 @@ To set up the `dotfiles` run the appropriate snippet in the terminal:
       Terminal configuration
       Keyborard configuration
 6.- restart.sh  - Restart pc
+```
